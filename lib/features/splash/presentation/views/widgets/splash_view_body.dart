@@ -17,18 +17,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
-
-    animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 750),
-    );
-
-    slidingAnimation = Tween<Offset>(
-      begin: Offset(0, 2),
-      end: Offset.zero,
-    ).animate(animationController);
-
-    animationController.forward(); // Start the animation
+    initSlidingAnimation();
   }
 
   @override
@@ -48,5 +37,19 @@ class _SplashViewBodyState extends State<SplashViewBody>
         SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
+  }
+
+  void initSlidingAnimation() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 750),
+    );
+
+    slidingAnimation = Tween<Offset>(
+      begin: Offset(0, 2),
+      end: Offset.zero,
+    ).animate(animationController);
+
+    animationController.forward(); // Start the animation
   }
 }
