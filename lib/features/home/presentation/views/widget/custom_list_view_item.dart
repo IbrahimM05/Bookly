@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+class CustomListViewItem extends StatelessWidget {
+  final String image;
+  final VoidCallback onTap;
+
+  const CustomListViewItem({
+    super.key,
+    required this.image,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: onTap,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              // Poster
+              AspectRatio(
+                aspectRatio: 2 / 3,
+                child: Image.network('', fit: BoxFit.cover),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
