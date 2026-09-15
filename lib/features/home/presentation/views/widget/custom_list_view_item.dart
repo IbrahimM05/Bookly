@@ -26,14 +26,7 @@ class CustomListViewItem extends StatelessWidget {
               aspectRatio: 2 / 3,
               child: Stack(
                 fit: StackFit.expand,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
-                    ),
-                    child: Image.asset(image, fit: BoxFit.cover),
-                  ),
-                ],
+                children: [Image.asset(image, fit: BoxFit.cover)],
               ),
             ),
           ),
