@@ -18,17 +18,24 @@ class CustomListViewItem extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
         onTap: onTap,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              // Poster
-              AspectRatio(
-                aspectRatio: 2 / 3,
-                child: Image.network('', fit: BoxFit.cover),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: AspectRatio(
+              aspectRatio: 2 / 3,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Image.asset(image, fit: BoxFit.cover),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),
