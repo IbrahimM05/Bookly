@@ -22,3 +22,11 @@ flutter:
 
   assets:
     - assets/images/
+
+  fonts:
+    - family: GT Sectra Fine
+      fonts:
+        - asset: assets/fonts/GT-Sectra-Fine.ttf
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-Bold.ttf
