@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomListViewItem extends StatelessWidget {
+class CustomBookImage extends StatelessWidget {
   final String image;
   final VoidCallback onTap;
 
-  const CustomListViewItem({
-    super.key,
-    required this.image,
-    required this.onTap,
-  });
+  const CustomBookImage({super.key, required this.image, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
